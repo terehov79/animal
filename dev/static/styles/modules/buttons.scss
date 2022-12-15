@@ -1,0 +1,33 @@
+.btn_in-cart {
+  @include size(126px, 36px);
+  background: #FF2E65;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  color: #FFFFFF;
+  border: none;
+}
+
+.btn_call {
+  @include size(180px, 42px);
+  background: #F3F3F7;
+  border-radius: 28px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  color: #696F7A;
+  border: none;
+}
+
+.btn_stock {
+  @include size(160px, 48px);
+  @extend .btn_in-cart;
+}
+
+.btn_cart {
+  @include size(160px, 42px);
+  @extend .btn_in-cart;
+  font-weight: 600;
+  font-size: 16px;
+}

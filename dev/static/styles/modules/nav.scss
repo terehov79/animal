@@ -1,0 +1,16 @@
+.nav {
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__item {
+    margin-left: 10px;
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #0E0C0D;
+  }
+}
