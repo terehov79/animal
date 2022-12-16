@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Futura New';
-  src: local("Futura New Bold Reg"), local("Futura-New-Bold-Reg"), url("../../fonts/FuturaNewBold-Reg.woff2") format("woff2"), url("../../fonts/FuturaNewBold-Reg.woff") format("woff"), url("../../fonts/FuturaNewBold-Reg.ttf") format("truetype");
+  src: local("Futura New Bold Reg"), local("Futura-New-Bold-Reg"), url("../fonts/FuturaNewBold-Reg.woff2") format("woff2"), url("../fonts/FuturaNewBold-Reg.woff") format("woff"), url("../fonts/FuturaNewBold-Reg.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura New';
-  src: local("Futura New Book Reg"), local("Futura-New-Book-Reg"), url("../../FuturaNewBook-Reg.woff2") format("woff2"), url("../../FuturaNewBook-Reg.woff") format("woff"), url("../../FuturaNewBook-Reg.ttf") format("truetype");
+  src: local("Futura New Book Reg"), local("Futura-New-Book-Reg"), url("../fonts/FuturaNewBook-Reg.woff2") format("woff2"), url("../fonts/FuturaNewBook-Reg.woff") format("woff"), url("../fonts/FuturaNewBook-Reg.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -175,6 +175,7 @@ textarea {
   width: 100%; }
   .header__main {
     width: 100%;
+    padding-top: 65px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -184,13 +185,78 @@ textarea {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  .header__logo img {
+  .header__logo a img {
     width: 100px;
     height: 100px; }
+  .header__menu {
+    min-width: 920px; }
+    .header__menu .nav__link {
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 20px;
+      color: #C3B9B5; }
+  .header__location a {
+    font-family: 'Futura New';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFC59E; }
+    .header__location a img {
+      width: 20px;
+      height: 30px;
+      margin-right: 19px; }
 
 .footer {
   width: 100%; }
 
 .welcome {
   width: 100%;
-  padding-top: 25px; }
+  height: 100%; }
+  .welcome .swiper {
+    width: 100%; }
+    .welcome .swiper .swiper-slide {
+      width: 100%; }
+      .welcome .swiper .swiper-slide .slide01, .welcome .swiper .swiper-slide .slide02, .welcome .swiper .swiper-slide .slide03, .welcome .swiper .swiper-slide .slide04, .welcome .swiper .swiper-slide .slide05, .welcome .swiper .swiper-slide .slide06 {
+        width: 100%;
+        padding: 50px 0 0 370px;
+        position: relative; }
+        .welcome .swiper .swiper-slide .slide01::before, .welcome .swiper .swiper-slide .slide02::before, .welcome .swiper .swiper-slide .slide03::before, .welcome .swiper .swiper-slide .slide04::before, .welcome .swiper .swiper-slide .slide05::before, .welcome .swiper .swiper-slide .slide06::before {
+          content: "";
+          position: absolute;
+          top: 50px;
+          right: 0;
+          display: block;
+          width: 834px;
+          height: 768px;
+          background-image: url("../img/content/slide01.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: red;
+          z-index: 2; }
+        .welcome .swiper .swiper-slide .slide01 h2, .welcome .swiper .swiper-slide .slide02 h2, .welcome .swiper .swiper-slide .slide03 h2, .welcome .swiper .swiper-slide .slide04 h2, .welcome .swiper .swiper-slide .slide05 h2, .welcome .swiper .swiper-slide .slide06 h2 {
+          font-family: 'SchoolBook';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 80px;
+          line-height: 110px;
+          color: #080606;
+          max-width: 570px; }
+      .welcome .swiper .swiper-slide .slide02::before {
+        background-image: url("../img/content/slide02.png"); }
+      .welcome .swiper .swiper-slide .slide03::before {
+        background-image: url("../img/content/slide03.png"); }
+      .welcome .swiper .swiper-slide .slide04::before {
+        background-image: url("../img/content/slide04.png"); }
+      .welcome .swiper .swiper-slide .slide05::before {
+        background-image: url("../img/content/slide05.png"); }
+      .welcome .swiper .swiper-slide .slide05 h2 {
+        max-width: 800px; }
+      .welcome .swiper .swiper-slide .slide06::before {
+        background-image: url("../img/content/slide06.png"); }
+
+.container {
+  max-width: 1760px; }

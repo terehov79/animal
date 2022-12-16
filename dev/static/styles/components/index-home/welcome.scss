@@ -1,48 +1,116 @@
 .welcome {
   width: 100%;
-  padding-top: 25px;
-  // .swiper {
-  //   width: 100%;
-  //   max-height: 409px;
-  //   border-radius: 20px;
-  //   overflow: hidden;
-  //   .swiper-slide {
-  //     width: 100%;
-  //     img {
-  //       width: 100%;
-  //       max-height: 409px;
-  //       border-radius: 20px;
-  //       object-fit: cover;
-  //       object-position: center center;
-  //     }
-  //   }
-  //   .swiper-btn{
-  //     width: 100%;
-  //     display: flex;
-  //     position: absolute;
-  //     .swiper-button-prev, .swiper-button-next {
-  //       position: relative;
-  //       cursor: pointer;
-  //       top: -220px;
-  //       left: -50px;
-  //       svg {
-  //         fill: lightgreen;
-  //         width: 50px;
-  //         height: 50px;
-  //       }
-  //     }
-  //     .swiper-button-prev {
-  //       rotate: (-180deg);
-  //     }
-  //     .swiper-button-next {
-  //       left: 1060px;
-  //     }
-  //     .swiper-button-disabled {
-  //       opacity: 0.3;
-  //     }
-  //   }
-  // }
+  height: 100%;
+
+  .swiper {
+    width: 100%;
+    .swiper-slide {
+      width: 100%;
+      .slide01, .slide02, .slide03, .slide04, .slide05, .slide06 {
+        width: 100%;
+        padding: 50px 0 0 370px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50px;
+          right: 0;
+          display: block;
+          @include size(834px, 768px);
+          background-image: url('../img/content/slide01.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: red;
+          z-index: 2;
+        }
+        h2 {
+          font-family: 'SchoolBook';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 80px;
+          line-height: 110px;
+          color: #080606;
+          max-width: 570px;
+        }
+      }
+      .slide02 {
+        &::before {
+          background-image: url('../img/content/slide02.png');
+        }
+      }
+      .slide03 {
+        &::before {
+          background-image: url('../img/content/slide03.png');
+        }
+      }
+      .slide04 {
+        &::before {
+          background-image: url('../img/content/slide04.png');
+        }
+      }
+      .slide05 {
+        &::before {
+          background-image: url('../img/content/slide05.png');
+        }
+        h2 {
+          max-width: 800px;
+        }
+      }
+      .slide06 {
+        &::before {
+          background-image: url('../img/content/slide06.png');
+        }
+      }
+    }
+  }
 }
+
+
+
+
+// .swiper {
+//   width: 100%;
+//   max-height: 409px;
+//   border-radius: 20px;
+//   overflow: hidden;
+//   .swiper-slide {
+//     width: 100%;
+//     img {
+//       width: 100%;
+//       max-height: 409px;
+//       border-radius: 20px;
+//       object-fit: cover;
+//       object-position: center center;
+//     }
+//   }
+//   .swiper-btn{
+//     width: 100%;
+//     display: flex;
+//     position: absolute;
+//     .swiper-button-prev, .swiper-button-next {
+//       position: relative;
+//       cursor: pointer;
+//       top: -220px;
+//       left: -50px;
+//       svg {
+//         fill: lightgreen;
+//         width: 50px;
+//         height: 50px;
+//       }
+//     }
+//     .swiper-button-prev {
+//       rotate: (-180deg);
+//     }
+//     .swiper-button-next {
+//       left: 1060px;
+//     }
+//     .swiper-button-disabled {
+//       opacity: 0.3;
+//     }
+//   }
+// }
+
 
 // .swiper-pagination {
 //   width: 100%;
