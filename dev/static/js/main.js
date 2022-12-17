@@ -5,17 +5,29 @@
   });
 
   new Swiper('.swiper', {
-    speed: 1000,
-    spaceBetween: 100,
+    speed: 500,
+    spaceBetween: 0,
     loop: false,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
     pagination: {
       el: '.swiper-pagination',
-      type: 'bullets',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      }
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
   });
 
 })(jQuery);

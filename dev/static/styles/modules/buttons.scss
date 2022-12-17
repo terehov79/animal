@@ -1,33 +1,22 @@
-.btn_in-cart {
-  @include size(126px, 36px);
-  background: #FF2E65;
-  border-radius: 8px;
+.btn_signup {
+  @include size(285px, 67px);
+  background: #FFC59E;
+  box-shadow: 0px 4px 20px #FFC59E;
+  border-radius: 33.5px;
+  font-family: 'Futura New';
+  font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 20px;
   color: #FFFFFF;
   border: none;
 }
 
-.btn_call {
-  @include size(180px, 42px);
-  background: #F3F3F7;
-  border-radius: 28px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 28px;
-  color: #696F7A;
+.btn_social {
   border: none;
-}
-
-.btn_stock {
-  @include size(160px, 48px);
-  @extend .btn_in-cart;
-}
-
-.btn_cart {
-  @include size(160px, 42px);
-  @extend .btn_in-cart;
-  font-weight: 600;
-  font-size: 16px;
+  margin-right: 20px;
+  background-color: transparent;
+  img {
+    @include size(40px);
+  }
 }

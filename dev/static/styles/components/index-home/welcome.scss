@@ -1,104 +1,79 @@
 .welcome {
   @include size(100%);
-  .swiper {
-    overflow: hidden;
-    .swiper-slide {
-      .slide {
-        width: 100%;
-        padding: 150px 0 0 300px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        &__main {
-          h2 {
-            font-family: 'SchoolBook';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 80px;
-            line-height: 110px;
-            color: #080606;
-            max-width: 570px;
-            padding-bottom: 50px;
-          }
-          a {
-            padding: 24px 77px;
-            background: #FFC59E;
-            box-shadow: 0px 4px 20px #FFC59E;
-            border-radius: 33.5px;
-            font-family: 'Futura New';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 20px;
-            color: #FFFFFF;
-          }
-        }
-        &__social {
-          padding-top: 200px;
-          img {
-            @include size(40px);
-            margin-right: 50px;
-          }
-        }
-        &__img {
-          @include size(834px, 786px);
-          img {
-            @include size(100%);
-            object-fit: contain;
-            object-position: center center;
-          }
+  &--wrap {
+    position: relative;
+    .social, .phone {
+      position: absolute;
+      bottom: 50px;
+      left: 300px;
+      display: block;
+      z-index: 3;
+    }
+    .phone {
+      left: initial;
+      right: 0;
+      a {
+        font-family: 'Futura New';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: #59443F;
         }
       }
+    .slide {
+      width: 100%;
+      min-height: 800px;
+      padding: 100px 0 0 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+      background-color: #fff;
+      h2 {
+        font-family: 'SchoolBook';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 110px;
+        color: #080606;
+        max-width: 700px;
+        padding-bottom: 50px;
+      }
+      img {
+        max-width: 55%;
+        max-height: 720px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: block;
+        z-index: 2;
+      }
+    }   
+  }
+  .swiper-pagination {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    display: block;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    &-bullet {
+      margin-top: 70px;
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 20px;
+      color: #C3B9B5;
+      cursor: pointer;
+      &-active {
+        color: #080606;
+        transition: all 1s ease-out;
+      }
     }
+    
   }
 }
-
-
-
-
-// .swiper {
-//   width: 100%;
-//   max-height: 409px;
-//   border-radius: 20px;
-//   overflow: hidden;
-//   .swiper-slide {
-//     width: 100%;
-//     img {
-//       width: 100%;
-//       max-height: 409px;
-//       border-radius: 20px;
-//       object-fit: cover;
-//       object-position: center center;
-//     }
-//   }
-//   .swiper-btn{
-//     width: 100%;
-//     display: flex;
-//     position: absolute;
-//     .swiper-button-prev, .swiper-button-next {
-//       position: relative;
-//       cursor: pointer;
-//       top: -220px;
-//       left: -50px;
-//       svg {
-//         fill: lightgreen;
-//         width: 50px;
-//         height: 50px;
-//       }
-//     }
-//     .swiper-button-prev {
-//       rotate: (-180deg);
-//     }
-//     .swiper-button-next {
-//       left: 1060px;
-//     }
-//     .swiper-button-disabled {
-//       opacity: 0.3;
-//     }
-//   }
-// }
-
-
-// .swiper-pagination {
-//   width: 100%;
-// }
