@@ -1,65 +1,52 @@
 .welcome {
-  width: 100%;
-  height: 100%;
-
+  @include size(100%);
   .swiper {
-    width: 100%;
+    overflow: hidden;
     .swiper-slide {
-      width: 100%;
-      .slide01, .slide02, .slide03, .slide04, .slide05, .slide06 {
+      .slide {
         width: 100%;
-        padding: 50px 0 0 370px;
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 50px;
-          right: 0;
-          display: block;
-          @include size(834px, 768px);
-          background-image: url('../img/content/slide01.png');
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-color: red;
-          z-index: 2;
+        padding: 150px 0 0 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        &__main {
+          h2 {
+            font-family: 'SchoolBook';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 110px;
+            color: #080606;
+            max-width: 570px;
+            padding-bottom: 50px;
+          }
+          a {
+            padding: 24px 77px;
+            background: #FFC59E;
+            box-shadow: 0px 4px 20px #FFC59E;
+            border-radius: 33.5px;
+            font-family: 'Futura New';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 20px;
+            color: #FFFFFF;
+          }
         }
-        h2 {
-          font-family: 'SchoolBook';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 80px;
-          line-height: 110px;
-          color: #080606;
-          max-width: 570px;
+        &__social {
+          padding-top: 200px;
+          img {
+            @include size(40px);
+            margin-right: 50px;
+          }
         }
-      }
-      .slide02 {
-        &::before {
-          background-image: url('../img/content/slide02.png');
-        }
-      }
-      .slide03 {
-        &::before {
-          background-image: url('../img/content/slide03.png');
-        }
-      }
-      .slide04 {
-        &::before {
-          background-image: url('../img/content/slide04.png');
-        }
-      }
-      .slide05 {
-        &::before {
-          background-image: url('../img/content/slide05.png');
-        }
-        h2 {
-          max-width: 800px;
-        }
-      }
-      .slide06 {
-        &::before {
-          background-image: url('../img/content/slide06.png');
+        &__img {
+          @include size(834px, 786px);
+          img {
+            @include size(100%);
+            object-fit: contain;
+            object-position: center center;
+          }
         }
       }
     }

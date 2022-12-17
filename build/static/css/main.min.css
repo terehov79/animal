@@ -216,47 +216,56 @@ textarea {
   width: 100%;
   height: 100%; }
   .welcome .swiper {
-    width: 100%; }
-    .welcome .swiper .swiper-slide {
-      width: 100%; }
-      .welcome .swiper .swiper-slide .slide01, .welcome .swiper .swiper-slide .slide02, .welcome .swiper .swiper-slide .slide03, .welcome .swiper .swiper-slide .slide04, .welcome .swiper .swiper-slide .slide05, .welcome .swiper .swiper-slide .slide06 {
-        width: 100%;
-        padding: 50px 0 0 370px;
-        position: relative; }
-        .welcome .swiper .swiper-slide .slide01::before, .welcome .swiper .swiper-slide .slide02::before, .welcome .swiper .swiper-slide .slide03::before, .welcome .swiper .swiper-slide .slide04::before, .welcome .swiper .swiper-slide .slide05::before, .welcome .swiper .swiper-slide .slide06::before {
-          content: "";
-          position: absolute;
-          top: 50px;
-          right: 0;
-          display: block;
-          width: 834px;
-          height: 768px;
-          background-image: url("../img/content/slide01.png");
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-color: red;
-          z-index: 2; }
-        .welcome .swiper .swiper-slide .slide01 h2, .welcome .swiper .swiper-slide .slide02 h2, .welcome .swiper .swiper-slide .slide03 h2, .welcome .swiper .swiper-slide .slide04 h2, .welcome .swiper .swiper-slide .slide05 h2, .welcome .swiper .swiper-slide .slide06 h2 {
-          font-family: 'SchoolBook';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 80px;
-          line-height: 110px;
-          color: #080606;
-          max-width: 570px; }
-      .welcome .swiper .swiper-slide .slide02::before {
-        background-image: url("../img/content/slide02.png"); }
-      .welcome .swiper .swiper-slide .slide03::before {
-        background-image: url("../img/content/slide03.png"); }
-      .welcome .swiper .swiper-slide .slide04::before {
-        background-image: url("../img/content/slide04.png"); }
-      .welcome .swiper .swiper-slide .slide05::before {
-        background-image: url("../img/content/slide05.png"); }
-      .welcome .swiper .swiper-slide .slide05 h2 {
-        max-width: 800px; }
-      .welcome .swiper .swiper-slide .slide06::before {
-        background-image: url("../img/content/slide06.png"); }
+    overflow: hidden; }
+    .welcome .swiper .swiper-slide .slide {
+      width: 100%;
+      padding: 150px 0 0 300px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+      .welcome .swiper .swiper-slide .slide__main h2 {
+        font-family: 'SchoolBook';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 110px;
+        color: #080606;
+        max-width: 570px;
+        padding-bottom: 50px; }
+      .welcome .swiper .swiper-slide .slide__main a {
+        padding: 24px 77px;
+        background: #FFC59E;
+        -webkit-box-shadow: 0px 4px 20px #FFC59E;
+        box-shadow: 0px 4px 20px #FFC59E;
+        border-radius: 33.5px;
+        font-family: 'Futura New';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        color: #FFFFFF; }
+      .welcome .swiper .swiper-slide .slide__social {
+        padding-top: 200px; }
+        .welcome .swiper .swiper-slide .slide__social img {
+          width: 40px;
+          height: 40px;
+          margin-right: 50px; }
+      .welcome .swiper .swiper-slide .slide__img {
+        width: 834px;
+        height: 786px; }
+        .welcome .swiper .swiper-slide .slide__img img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: contain;
+          object-fit: contain;
+          -o-object-position: center center;
+          object-position: center center; }
 
 .container {
   max-width: 1760px; }
