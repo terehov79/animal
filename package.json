@@ -40,7 +40,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^5.2.3",
     "inputmask": "^5.0.3",
     "izimodal-1.6.0": "^1.6.1",
     "jquery": "^3.4.1",
@@ -50,6 +50,7 @@
     "smooth-scroll": "^16.1.2",
     "svg4everybody": "^2.1.9",
     "swiper": "^8.4.5",
+    "uglify-js": "^3.17.4",
     "vanilla-lazyload": "^13.0.0",
     "vanilla-tilt": "^1.7.0",
     "vue": "^2.6.11"
