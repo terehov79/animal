@@ -1,0 +1,29 @@
+.history {
+  width: 100%;
+  min-height: 1020px;
+  padding: 180px 333px 206px;
+  h3 {
+    padding-bottom: 50px;
+    font-family: 'SchoolBook';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    // text-align: center;
+    color: #080606;
+  }
+  &--wrap {
+    width: 100%;
+    background-color: #FBF8F8;
+  }
+  &__company {
+    p {
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #59443F;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.menu-full
+  .container
+    .row 
+      - for (var i=0; i<16; i++)
+        .col-lg-3.col-6.mb-2
+          a(href="#")
+            .block 
+              .__info
+                p=servicesInfo[i]
+              .__serv
+                p=numServices[i]
+                  span услуг
+                +icon('vector' + i)

@@ -1,15 +1,17 @@
 .header {
-  @include size(100%, 80px);
+  width: 100%;
+  padding: 50px 0;
   &__main {
-    width: 100%;
+    @include size(100%, 80px);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   &__logo {
     a { 
-      img {
-        @include size(100px);
+      svg {
+        @include size(80px, 65px);
+        fill: #59443F;
       }
     }
   }
@@ -25,7 +27,12 @@
     }
   }
   &__location {
+    svg {
+      @include size(20px, 30px);
+      fill: #FFC59E;
+    }
     a {
+      margin-left: 10px;
       font-family: 'Futura New';
       font-style: normal;
       font-weight: 700;

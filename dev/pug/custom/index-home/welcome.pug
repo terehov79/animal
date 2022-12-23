@@ -2,14 +2,9 @@
   .container
     .welcome--wrap
       .social
-        button(type='button', name='stock').btn_social
-          img(src="/static/img/svg/inst.svg")
-        button(type='button', name='social').btn_social
-          img(src="/static/img/svg/fb.svg")
-        button(type='button', name='social').btn_social
-          img(src="/static/img/svg/vk.svg")
-        button(type='button', name='social').btn_social
-          img(src="/static/img/svg/youtube.svg")
+        - for (var i=0; i<4; i++)
+          button(type='button', name='stock').btn_social
+            +icon('social' + i)
       .phone
         a(href="tel:78442962292")
           | +7 (8442) 96 22 92
@@ -51,4 +46,4 @@
               button(type='button', name='signup').btn_signup
                 | ЗАПИСАТЬСЯ
               img(src="/static/img/content/slide06.png")
-      .swiper-pagination      
+      .swiper-pagination

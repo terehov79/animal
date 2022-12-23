@@ -1,11 +1,16 @@
 extends ../layout/main
 
 block variables
-  - var title = '24 NEWS | COVID-19 KHMELNITSKIY'
+
+  - var title = 'Aibolit'
   - var pageClass = 'index-page'
+  - var numServices = ['25', '100', '70', '38', '27', '27', '20', '20', '25', '100', '70', '38', '27', '27', '20', '20']
+  - var servicesInfo = ['Терапия', 'Хирургия', 'Неврология', 'Ортопедия', 'Дерматология', 'Офтальмология', 'Кардиология', 'Стоматология', 'Репродуктология', 'Визуальная диагностика', 'Лаборатория', 'Онкология', 'Эндокринология', 'Экзотические животные', 'Аптека', 'Груминг']
 
 block content
 
   include ../custom/index-home/welcome
+  //- include ../custom/index-home/menu
+  //- include ../custom/index-home/history
 
-block script
+block script 

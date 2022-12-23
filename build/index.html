@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>24 NEWS | COVID-19 KHMELNITSKIY</title><!--[if IE]>
+    <title>Aibolit</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="">
@@ -15,6 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
     <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- CSS-->
     <link rel="stylesheet" type="text/css" href="static/css/libs.min.css">
@@ -27,7 +28,10 @@
       <header class="header">
         <div class="container">
           <div class="header__main"> 
-            <div class="header__logo"><a href="#"><img src="../static/img/general/logo.png"></a></div>
+            <div class="header__logo"><a href="#">
+                <svg class="icon icon-logo ">
+                  <use xlink:href="static/img/svg-sprites/symbol/sprite.svg#logo"></use>
+                </svg></a></div>
             <div class="header__menu">
               <ul class="nav"> 
                 <li class="nav__item"> <a class="nav__link" href="#">ЛИЧНЫЙ КАБИНЕТ</a></li>
@@ -37,7 +41,11 @@
                 <li class="nav__item"> <a class="nav__link" href="#">БЛОГ</a></li>
               </ul>
             </div>
-            <div class="header__location"><a href="#"><img src="../static/img/svg/places.svg">ВОЛГОГРАД</a></div>
+            <div class="header__location">
+              <svg class="icon icon-places ">
+                <use xlink:href="static/img/svg-sprites/symbol/sprite.svg#places"></use>
+              </svg><a href="#">ВОЛГОГРАД</a>
+            </div>
           </div>
         </div>
       </header>
@@ -46,10 +54,26 @@
           <div class="container">
             <div class="welcome--wrap">
               <div class="social">
-                <button class="btn_social" type="button" name="stock"><img src="/static/img/svg/inst.svg"></button>
-                <button class="btn_social" type="button" name="social"><img src="/static/img/svg/fb.svg"></button>
-                <button class="btn_social" type="button" name="social"><img src="/static/img/svg/vk.svg"></button>
-                <button class="btn_social" type="button" name="social"><img src="/static/img/svg/youtube.svg"></button>
+                <button class="btn_social" type="button" name="stock">
+                  <svg class="icon icon-social0 ">
+                    <use xlink:href="static/img/svg-sprites/symbol/sprite.svg#social0"></use>
+                  </svg>
+                </button>
+                <button class="btn_social" type="button" name="stock">
+                  <svg class="icon icon-social1 ">
+                    <use xlink:href="static/img/svg-sprites/symbol/sprite.svg#social1"></use>
+                  </svg>
+                </button>
+                <button class="btn_social" type="button" name="stock">
+                  <svg class="icon icon-social2 ">
+                    <use xlink:href="static/img/svg-sprites/symbol/sprite.svg#social2"></use>
+                  </svg>
+                </button>
+                <button class="btn_social" type="button" name="stock">
+                  <svg class="icon icon-social3 ">
+                    <use xlink:href="static/img/svg-sprites/symbol/sprite.svg#social3"></use>
+                  </svg>
+                </button>
               </div>
               <div class="phone"><a href="tel:78442962292">+7 (8442) 96 22 92</a></div>
               <div class="swiper">
@@ -91,7 +115,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination">     </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>

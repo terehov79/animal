@@ -3,7 +3,7 @@ header.header
     .header__main 
       .header__logo
         a(href="#")
-          img(src="../static/img/general/logo.png")
+          +icon ('logo')
       .header__menu
         ul.nav 
           li.nav__item 
@@ -22,6 +22,6 @@ header.header
             a(href="#").nav__link
               | БЛОГ
       .header__location
+        +icon('places')
         a(href="#")
-          img(src="../static/img/svg/places.svg")
           | ВОЛГОГРАД

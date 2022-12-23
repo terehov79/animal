@@ -8,6 +8,10 @@
       left: 300px;
       display: block;
       z-index: 3;
+      svg {
+        @include size(40px);
+        fill: #C3B9B5;
+      }
     }
     .phone {
       left: initial;
