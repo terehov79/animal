@@ -3,9 +3,8 @@ mixin icon(names, mod)
 	svg(class="icon icon-" + names + ' ' + mod)
 		use(xlink:href="static/img/svg-sprites/symbol/sprite.svg#" + names)
 
-mixin link_global(href, text, addClass)
-	a(href=href class= addClass).btn_global.tilt-js
-		span= text
+mixin link(href, text, addClass)
+	a(href= href class= addClass title= text)= text
 
 mixin logotype
 	a(href="index.html").logotype

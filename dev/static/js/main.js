@@ -4,7 +4,7 @@
     svg4everybody({});
   });
 
-  new Swiper('.swiper', {
+  new Swiper('.welcome--wrap .swiper', {
     speed: 500,
     spaceBetween: 0,
     loop: false,
@@ -18,7 +18,7 @@
       pauseOnMouseEnter: true
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.welcome--wrap .swiper-pagination',
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
