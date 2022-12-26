@@ -138,9 +138,21 @@ textarea {
   border: none;
   margin-right: 20px;
   background-color: transparent; }
-  .btn_social img {
-    width: 40px;
-    height: 40px; }
+
+.btn_read-more {
+  font-family: 'Futura New';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #FFC59E;
+  border: none; }
 
 .nav {
   width: 100%;
@@ -379,13 +391,32 @@ textarea {
   .history--wrap {
     width: 100%;
     background-color: #FBF8F8; }
-  .history__company p {
-    font-family: 'Futura New';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #59443F; }
+  .history__company, .history__specialists {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .history__company p, .history__specialists p {
+      padding-bottom: 35px;
+      max-width: 500px;
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #59443F; }
+  .history__specialists h3 {
+    padding-top: 100px; }
 
 .container {
   max-width: 1760px; }
