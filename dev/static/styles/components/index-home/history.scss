@@ -1,7 +1,7 @@
 .history {
   width: 100%;
   min-height: 1020px;
-  padding: 180px 333px 206px;
+  padding: 180px 0 206px;
   h3 {
     padding-bottom: 50px;
     font-family: 'SchoolBook';
@@ -15,7 +15,7 @@
     width: 100%;
     background-color: #FBF8F8;
   }
-  &__company, &__specialists {
+  &__company {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -33,8 +33,54 @@
     }
   }
   &__specialists {
+    padding: 0 200px;
+    position: relative;
     h3 {
+      text-align: center;
       padding-top: 100px;
     }
+    .swiper {
+      overflow: hidden;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    a {
+      display: block;
+      padding-top: 36px;
+      text-align: center;
+    }
+  }
+}
+
+.number {
+  width: 100%;
+  padding: 316px 0;
+  position: relative;
+  h3 {
+    font-family: 'SchoolBook';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 144px;
+    line-height: 110px;
+    color: #59443F;
+    text-align: center;
+  }
+  p {
+    font-family: 'Futura New';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 110px;
+    color: #080606;
+    text-align: center;
+  }
+  img {
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    z-index: 10;
   }
 }

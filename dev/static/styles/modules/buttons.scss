@@ -1,5 +1,8 @@
 .btn_signup {
   @include size(285px, 67px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #FFC59E;
   box-shadow: 0px 4px 20px #FFC59E;
   border-radius: 33.5px;
@@ -10,6 +13,7 @@
   line-height: 20px;
   color: #FFFFFF;
   border: none;
+  transition: all 1s ease-out;
 }
 
 .btn_social {
@@ -18,7 +22,7 @@
   background-color: transparent;
 }
 
-.btn_read-more {
+.btn_read-more, .btn_show-all {
   font-family: 'Futura New';
   font-style: normal;
   font-weight: 700;
@@ -28,4 +32,35 @@
   align-items: center;
   color: #FFC59E;
   border: none;
+  transition: all 1s ease-out;
+  &:hover {
+    color: #59443F;
+  }
+}
+
+.swiper-button-prev, .swiper-button-next {
+  @include size(40px);
+  background: #FFC59E;
+  border-radius: 50%;
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.2);
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 65%;
+  left: 150px;
+  transform: translateY(-50%);
+  svg {
+    @include size(20px);
+    transform: rotate(-180deg);
+    fill: #fff;
+  }
+}
+
+.swiper-button-next {
+  left: initial;
+  right: 150px;
+  svg {
+    transform: rotate(0);
+  }
 }

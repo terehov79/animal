@@ -7,4 +7,24 @@
         +link('#', 'ЧИТАТЬ ДАЛЕЕ', 'btn_read-more')
       .__specialists
         h3 Наши специалисты
-        +link('#', 'ПОСМОТРЕТЬ ВСЕХ', 'btn_read-more')
+        .swiper 
+          .swiper-wrapper
+            - for (var i=0; i<6; i++)
+              .swiper-slide
+                img(src='/static/img/content/circle'+ i +'.png')
+        .swiper-button-prev
+          +icon("arrow")
+        .swiper-button-next
+          +icon("arrow")
+        +link('#', 'ПОСМОТРЕТЬ ВСЕХ', 'btn_show-all')
+
+.number 
+  .container
+    .row.justify-content-center
+      .col-12
+        h3 1 150 000
+        p
+          | питомцам мы помогли
+          br
+          | за 18 лет работы
+        img(src='/static/img/content/bird.png')

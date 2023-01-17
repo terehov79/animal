@@ -11,6 +11,10 @@
       svg {
         @include size(40px);
         fill: #C3B9B5;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          fill: #FFC59E;
+        }
       }
     }
     .phone {
@@ -78,6 +82,5 @@
         transition: all 1s ease-out;
       }
     }
-    
   }
 }

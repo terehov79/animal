@@ -122,6 +122,15 @@ textarea {
 .btn_signup {
   width: 285px;
   height: 67px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: #FFC59E;
   -webkit-box-shadow: 0px 4px 20px #FFC59E;
   box-shadow: 0px 4px 20px #FFC59E;
@@ -132,14 +141,16 @@ textarea {
   font-size: 20px;
   line-height: 20px;
   color: #FFFFFF;
-  border: none; }
+  border: none;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out; }
 
 .btn_social {
   border: none;
   margin-right: 20px;
   background-color: transparent; }
 
-.btn_read-more {
+.btn_read-more, .btn_show-all {
   font-family: 'Futura New';
   font-style: normal;
   font-weight: 700;
@@ -152,7 +163,46 @@ textarea {
   -ms-flex-align: center;
   align-items: center;
   color: #FFC59E;
-  border: none; }
+  border: none;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out; }
+  .btn_read-more:hover, .btn_show-all:hover {
+    color: #59443F; }
+
+.swiper-button-prev, .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background: #FFC59E;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 65%;
+  left: 150px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .swiper-button-prev svg, .swiper-button-next svg {
+    width: 20px;
+    height: 20px;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    fill: #fff; }
+
+.swiper-button-next {
+  left: initial;
+  right: 150px; }
+  .swiper-button-next svg {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
 
 .nav {
   width: 100%;
@@ -166,13 +216,6 @@ textarea {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .nav__item {
-    margin-left: 10px; }
-  .nav__link {
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 18px;
-    color: #0E0C0D; }
 
 .header {
   width: 100%;
@@ -202,6 +245,10 @@ textarea {
       font-size: 20px;
       line-height: 20px;
       color: #C3B9B5; }
+      .header__menu .nav__link:hover {
+        color: #FFC59E;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out; }
   .header__location svg {
     width: 20px;
     height: 30px;
@@ -232,7 +279,11 @@ textarea {
       .welcome--wrap .social svg, .welcome--wrap .phone svg {
         width: 40px;
         height: 40px;
-        fill: #C3B9B5; }
+        fill: #C3B9B5;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out; }
+        .welcome--wrap .social svg:hover, .welcome--wrap .phone svg:hover {
+          fill: #FFC59E; }
     .welcome--wrap .phone {
       left: initial;
       right: 0; }
@@ -379,7 +430,7 @@ textarea {
 .history {
   width: 100%;
   min-height: 1020px;
-  padding: 180px 333px 206px; }
+  padding: 180px 0 206px; }
   .history h3 {
     padding-bottom: 50px;
     font-family: 'SchoolBook';
@@ -391,7 +442,7 @@ textarea {
   .history--wrap {
     width: 100%;
     background-color: #FBF8F8; }
-  .history__company, .history__specialists {
+  .history__company {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -406,7 +457,7 @@ textarea {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    .history__company p, .history__specialists p {
+    .history__company p {
       padding-bottom: 35px;
       max-width: 500px;
       font-family: 'Futura New';
@@ -415,8 +466,59 @@ textarea {
       font-size: 20px;
       line-height: 30px;
       color: #59443F; }
-  .history__specialists h3 {
-    padding-top: 100px; }
+  .history__specialists {
+    padding: 0 200px;
+    position: relative; }
+    .history__specialists h3 {
+      text-align: center;
+      padding-top: 100px; }
+    .history__specialists .swiper {
+      overflow: hidden; }
+      .history__specialists .swiper img {
+        display: block;
+        margin: 0 auto; }
+    .history__specialists a {
+      display: block;
+      padding-top: 36px;
+      text-align: center; }
+
+.number {
+  width: 100%;
+  padding: 316px 0;
+  position: relative; }
+  .number h3 {
+    font-family: 'SchoolBook';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 144px;
+    line-height: 110px;
+    color: #59443F;
+    text-align: center; }
+  .number p {
+    font-family: 'Futura New';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 110px;
+    color: #080606;
+    text-align: center; }
+  .number img {
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    z-index: 10; }
+
+.choose {
+  width: 100%; }
+  .choose h4 {
+    font-family: 'SchoolBook';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #080606;
+    text-align: center; }
 
 .container {
   max-width: 1760px; }
