@@ -2,6 +2,13 @@
   width: 100%;
   min-height: 1020px;
   padding: 180px 0 206px;
+  @include xl {
+    min-height: auto;
+    padding: 100px 0;
+  }
+  @include md {
+    padding: 0;
+  }
   h3 {
     padding-bottom: 50px;
     font-family: 'SchoolBook';
@@ -35,6 +42,9 @@
   &__specialists {
     padding: 0 200px;
     position: relative;
+    @include lg {
+      padding: 0 150px;
+    }
     h3 {
       text-align: center;
       padding-top: 100px;
@@ -58,6 +68,9 @@
   width: 100%;
   padding: 316px 0;
   position: relative;
+  @include xl {
+    padding: 150px 0;
+  }
   h3 {
     font-family: 'SchoolBook';
     font-style: normal;

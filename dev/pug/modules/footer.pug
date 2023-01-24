@@ -1,2 +1,48 @@
-footer.footer
+footer.footer--wrap
   .container
+    .footer
+      .row
+        .col-lg-8
+          .footer__logo
+            a(href="#")
+              img(src='/static/img/svg/logo_footer.svg' title='Айболит ветеринарная клиника' alt='Айболит ветеринарная клиника' width='324' height='90')
+          .footer__menu
+            .row 
+              .col-lg-4.col-md-12
+                .footer__section 
+                  a(href="#") Политика конфиденциальности в отношении обработки персональных данных
+              .col-lg-4.col-md-6
+                .footer__section
+                  a(href="#") Главная
+                  a(href="#") Услуги и цены
+                  a(href="#") История компании
+                  a(href="#") Наши специалисты
+                  a(href="#") Вакансии
+                  a(href="#") Реквизиты
+                  a(href="#") Онлайн-оплата 
+              .col-lg-4.col-md-6
+                .footer__section
+                  a(href="#") Отзывы
+                  a(href="#") Контакты
+                  a(href="#") Груминг-салон
+                  a(href="#") Косметика
+                  a(href="#") Новости и акции
+                  a(href="#") Блог
+        .col-lg-4
+          .footer__app
+            a(href="#")
+              img(src='/static/img/content/appstore.png' title='appstore' alt='appstore' width='140' height='40')
+            a(href="#")
+              img(src='/static/img/content/googleplay.png' title='googleplay' alt='googleplay' width='140' height='40')
+          .footer__socials
+            - for (var i=0; i<4; i++)
+              a(href='#')
+                +icon('social' + i)
+          .footer__mail
+            a(href="mailto: aibolit34.ru") aibolit34.ru
+            a(href="mailto: aibolit34@gmail.com") aibolit34@gmail.com
+          .footer__made
+            a(href="#") Made with
+            a(href="#") 
+              img(src="/static/img/content/heart.png", alt="") 
+            a(href="#") from UnitBean 

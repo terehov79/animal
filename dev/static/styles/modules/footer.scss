@@ -1,3 +1,98 @@
 .footer {
   width: 100%;
+  padding: 80px 0 80px 130px;
+  @include xl {
+    padding: 50px 0 50px 100px;
+  }
+  @include lg {
+    padding: 30px;
+  }
+  &--wrap {
+    width: 100%;
+    background-color: #59443F;
+  }
+  &__logo {
+    @include size(324px, 90px);
+  }
+  &__menu {
+    width: 100%;
+    padding: 25px 0 0 112px;
+    @include lg {
+      padding: 25px 0 0 0;
+    }
+  }
+  &__section {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include md {
+      max-width: 100%;
+      padding-bottom: 25px;
+    }
+    a {
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #FFFFFF;
+    }
+  }
+  &__app {
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    a {
+      display: block;
+      padding-right: 30px;
+      img {
+        @include size(140px, 40px);
+      }
+    }
+  }
+  &__socials {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    svg {
+      @include size(40px);
+      fill: #fff;
+      transition: all 0.5s ease-in-out;
+      margin-right: 50px;
+      &:hover {
+        fill: #FFC59E;
+      }
+    }
+  }
+  &__mail {
+    width: 100%;
+    padding: 30px 0 70px;
+    a {
+      display: block;
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #FFFFFF;
+    }
+  }
+  &__made {
+    a {
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #FFFFFF;
+    }
+    img {
+      margin: 0 10px 0 5px;
+    }
+  }
  }

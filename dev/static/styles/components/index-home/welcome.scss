@@ -1,5 +1,9 @@
 .welcome {
   @include size(100%);
+  padding-top: 180px;
+  @include lg {
+    padding-top: 100px;
+  }
   &--wrap {
     position: relative;
     .social, .phone {
@@ -8,6 +12,12 @@
       left: 300px;
       display: block;
       z-index: 3;
+      @include xl {
+        left: 200px;
+      }
+      @include lg {
+        left: 100px;
+      }
       svg {
         @include size(40px);
         fill: #C3B9B5;
@@ -39,6 +49,13 @@
       align-items: flex-start;
       position: relative;
       background-color: #fff;
+      @include xl {
+        padding: 100px 0 0 200px;
+      }
+      @include lg {
+        min-height: 600px;
+        padding: 80px 0 0 100px;
+      }
       h2 {
         font-family: 'SchoolBook';
         font-style: normal;
@@ -48,6 +65,15 @@
         color: #080606;
         max-width: 700px;
         padding-bottom: 50px;
+        @include lg {
+          max-width: 600px;
+          font-size: 70px;
+          line-height: 80px;
+        }
+        @include md {
+          font-size: 50px;
+          line-height: 60px;
+        }
       }
       img {
         max-width: 55%;
@@ -57,6 +83,9 @@
         right: 0;
         display: block;
         z-index: 2;
+        @include lg {
+          max-height: 520px;
+        }
       }
     }   
   }
@@ -81,6 +110,10 @@
         color: #080606;
         transition: all 1s ease-out;
       }
+    }
+    @include lg {
+      top: 25px;
+      left: 25px;
     }
   }
 }

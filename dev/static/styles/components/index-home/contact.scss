@@ -1,0 +1,65 @@
+.contact {
+  width: 100%;
+  padding: 230px;
+  @include xl {
+    padding: 100px;
+  }
+  @include lg {
+    padding: 50px;
+  }
+  h4 {
+    font-family: 'SchoolBook';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #080606;
+    padding-bottom: 50px;
+  }
+  .info {
+    width: 100%;
+    &__card {
+      width: 100%;
+      p {
+        font-family: 'SchoolBook';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 40px;
+        color: #080606;
+        padding-bottom: 20px;
+      }
+    }
+    &__box {
+      width: 100%;
+      padding-bottom: 15px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      svg {
+        @include size(40px);
+        fill: #FFC59E;
+      }
+      span {
+        font-family: 'Futura New';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #59443F;
+        max-width: 320px;
+        display: block;
+        margin-left: 30px;
+      }
+    }
+  }
+  .map {
+    width: 100%;
+    height: 526px;
+    iframe {
+      @include size(100%);
+      display: block;
+      border: none;
+    }
+  }
+}

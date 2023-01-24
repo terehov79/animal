@@ -50,6 +50,9 @@
   top: 65%;
   left: 150px;
   transform: translateY(-50%);
+  @include lg {
+    left: 80px;
+  }
   svg {
     @include size(20px);
     transform: rotate(-180deg);
@@ -60,7 +63,37 @@
 .swiper-button-next {
   left: initial;
   right: 150px;
+  @include lg {
+    right: 80px;
+  }
   svg {
     transform: rotate(0);
+  }
+}
+
+.burger {
+  display: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  @include size(100px);
+  justify-content: center;
+  align-items: center;
+  @include lg {
+    display: flex;
+  }
+  .close {
+    display: none;
+  }
+  &.active {
+    .open {
+      display: none;
+    }
+    .close {
+      display: block;
+    }
   }
 }

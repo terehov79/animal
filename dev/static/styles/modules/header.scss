@@ -1,6 +1,16 @@
 .header {
   width: 100%;
   padding: 50px 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  @include lg {
+    padding: 25px;
+  }
   &__main {
     @include size(100%, 80px);
     display: flex;
@@ -9,14 +19,45 @@
   }
   &__logo {
     a { 
-      svg {
-        @include size(80px, 65px);
-        fill: #59443F;
+      @include size(100px);
+      display: block;
+      img {
+        @include size(100%, auto);
       }
     }
   }
   &__menu {
     min-width: 1100px;
+    @include xl {
+      min-width: 900px;
+    }
+    @include lg {
+      @include size(100%, calc(100%  - 130px));
+      background-color: #fff;
+      position: fixed;
+      left: -120%;
+      bottom: 0;
+      z-index: 998;
+      overflow-y: auto;
+    }
+    .nav {
+      width: 100%;
+      min-height: 42px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include lg {
+        padding: 50px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+    }
+    .nav__item {
+      @include lg {
+        padding-bottom: 30px;
+      }
+    }
     .nav__link {
       font-family: 'Futura New';
       font-style: normal;
@@ -28,7 +69,13 @@
         color: #FFC59E;
         transition: all 0.5s ease-out;
       }
+      @include lg {
+        font-size: 25px;
+      }
     }
+  }
+  &__menu.active {
+    left: 0;
   }
   &__location {
     svg {

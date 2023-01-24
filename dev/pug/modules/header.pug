@@ -3,7 +3,7 @@ header.header
     .header__main 
       .header__logo
         a(href="#")
-          +icon ('logo')
+          img(src='/static/img/svg/logo_header.svg' title='header logo' alt='header logo' width='100' height='100')
       .header__menu
         ul.nav 
           li.nav__item 
@@ -22,6 +22,11 @@ header.header
             a(href="#").nav__link
               | БЛОГ
       .header__location
-        +icon('places')
+        +icon('places0')
         a(href="#")
-          | ВОЛГОГРАД
+          | LONDON
+      button(type="button" name="burger-btn").burger
+        img(src="/static/img/svg/burger.svg", alt="menu" width="100" height="100").open
+        img(src="/static/img/svg/close.svg", alt="menu" width="65" height="65").close
+
+
