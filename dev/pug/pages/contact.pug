@@ -1,0 +1,28 @@
+extends ../layout/main
+
+block variables
+
+  - var title = 'Aibolit'
+  - var pageClass = 'specialist-page'
+
+block content
+
+  - var contactLocation = ['Айболит на Краснополянской', 'Айболит на Тулака']
+  - var contactAddr = ['Дзержинский район, ул. Краснополянская, 30', '96 22 92', 'Круглосуточно']
+  
+  .contact 
+    .container
+      h4 Контакты
+      .row
+        .col-lg-4
+          .info 
+            - for (var i=0; i<2; i++)
+              .__card
+                p= contactLocation[i]
+                  - for (var j=0; j<3; j++)
+                    .__box
+                      +icon('places' + j)
+                      span= contactAddr[j]
+        .col-lg-8
+          .map
+            iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10381.65464169091!2d26.97045511336204!3d49.41999303504109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1670347850573!5m2!1sru!2sua")

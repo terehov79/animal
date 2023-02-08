@@ -1,0 +1,223 @@
+.specialist {
+  width: 100%;
+  padding-top: 200px;
+  .block-img {
+    width: 100%;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      @include size(333px);
+    }
+    span {
+      padding: 30px 0;
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      color: #C3B9B5;
+    }
+  }
+  .block-info, .block-review {
+    width: 100%;
+    h3 {
+      font-family: 'SchoolBook';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 40px;
+      color: #080606;
+    }
+    span, p, a {
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      color: #C3B9B5;
+    }
+    p {
+      padding-top: 30px;
+      line-height: 30px;
+      color: #59443F;
+    }
+    .courses {
+      width: 100%;
+      padding-top: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .cours {
+        width: auto;
+        min-height: 76px;
+        padding: 16px;
+        margin-right: 16px;
+        background: #FFFFFF;
+        border: 1px solid #EDE9E8;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        span, p {
+          font-family: 'Futura New';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 15px;
+          color: #C3B9B5;
+        }
+        p {
+          padding-top: 5px;
+          font-size: 20px;
+          line-height: 25px;
+          color: #080606;
+        }
+      }
+    }
+  }
+  .block-review {
+    width: 100%;
+    padding-top: 50px;
+    .head-review {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;      
+      align-items: center;
+    }
+    .pagination {
+      a {
+        margin-left: 16px;
+      }
+      a.active {
+        color: black;
+        font-weight: bold;
+      }
+    }
+    .page-review {
+      width: 100%;
+      padding-top: 30px;
+      &:not(:first-child) {
+        display: none;
+      }
+      .review {
+        width: 100%;
+        padding: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background: #FFFFFF;
+        border: 1px solid #EDE9E8;
+        border-radius: 20px;
+        p {
+          padding-top: 10px;
+        }
+        &__avatar {
+          width: 15%;
+          img {
+            @include size(130px);
+            border-radius: 50%;
+          }
+        }
+        &__info {
+          width: 85%;
+          margin-left: 30px;
+        }
+        &__user {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &__text {
+          width: 100%;
+          padding-top: 20px;
+        }
+        &__answer {
+          width: 100%;
+          padding-top: 30px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          img {
+            @include size(75px);
+            border-radius: 50%;
+          }
+        }
+        &__answer-text {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  width: 600px;
+  padding: 30px 50px;
+  background: #FFFFFF;
+  box-shadow: 2px 2px 20px rgba(155, 82, 50, 0.1);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  &-wrap {
+    display: none;
+    @include size(100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.8);
+  }
+  &-form {
+    width: 100%;
+    h2 {
+      text-align: center;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      textarea {
+        @include size(100%, 368px);
+        resize: none;
+        padding: 10px 15px;
+        display: block;
+        margin: 25px 0;
+        background: #FFFFFF;
+        border: 1px solid #EDE9E8;
+        border-radius: 20px;
+      }
+      button {
+        @include size(285px, 67px);
+        background: #FFC59E;
+        box-shadow: 0px 4px 20px #FFC59E;
+        border-radius: 33.5px;
+        border: none;
+        font-family: 'Futura New';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+      }
+    }
+  }
+  &-thankyou {
+    width: 100%;
+    display: none;
+    padding: 100px;
+    p {
+      text-align: center;
+    }
+  }
+}

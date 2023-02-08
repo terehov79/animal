@@ -1,0 +1,27 @@
+extends ../layout/main
+
+block variables
+
+  - var title = 'Aibolit'
+  - var pageClass = 'blog-page'
+
+block content
+
+  .blog
+    .container
+      .row
+        .col-lg-5
+          .blog-panel
+            h1 Блог
+            .blog-links
+              a(href="team.html") О НАС
+              a(href="specialist.html") СПЕЦИАЛИСТЫ
+        .col-lg-7
+          .blog-content
+            - for (var i=0; i<8; i++)
+              .blog-section 
+                img(src="/static/img/content/blog.png" title="blog" alt="blog" width="255" height="255")
+                .blog-info 
+                  h2 Наружный отит и грибы Malassezia
+                  span 29 мая 2018
+                  p Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после т ...

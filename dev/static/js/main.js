@@ -21,7 +21,7 @@
     },
   });
 
-  new Swiper('.history__specialists .swiper', {
+  new Swiper('.mini-history__specialists .swiper', {
     speed: 500,
     spaceBetween: 0,
     slidesPerView: 2,
@@ -58,5 +58,45 @@
     $('.header__menu').toggleClass('active');
     $(this).toggleClass('active');
   })
+
+  // Tabs
+  function tabsGlobal(on, target, tabsWrap, tabActive, boxWrap, boxItem, fade = 300) {
+    $(target).on(on, function (event) {
+      event.preventDefault();
+      if($(this).hasClass(tabActive)) {
+        return false
+      }
+      $(tabsWrap).find('.' + tabActive).removeClass(tabActive);
+      $(this).addClass(tabActive);
+      $(boxItem).hide();
+      $(boxWrap).find('.' + $(this).attr('data-box')).stop(true).fadeIn(fade);
+    });
+  };
+
+  tabsGlobal('click', '.pagination a', '.pagination', 'active', '.page-review-wrap', '.page-review');
+
+
+  // button click
+  $('.btn_review').on('click', function (event) {
+    event.preventDefault();
+    $('.modal-wrap').fadeIn(300);
+  });
+  
+  // modal close
+  $('.modal-wrap').on('click', function () {
+    $('.modal-wrap').fadeOut(300);
+  });
+
+  // modal area not close
+  $('.modal').on('click', function (event) {
+    event.stopPropagation();
+  });
+
+  //show modal thankyou
+  $('.modal-form button').on('click', function (event) {
+    event.preventDefault();
+    $('.modal-form').hide();
+    $('.modal-thankyou').show();
+  });
 
 })(jQuery);

@@ -1,0 +1,46 @@
+.blog {
+  width: 100%;
+  padding-bottom: 0;
+  &-content {
+    width: 100%;
+  }
+  &-section {
+    width: 100%;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      @include size(255px);
+      border-radius: 20px;
+    }
+  }
+  &-info {
+    width: 100%;
+    margin-left: 30px;
+    h2 {
+      font-family: 'SchoolBook';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 50px;
+      color: #080606;
+    }
+    span, p {
+      display: block;
+      margin: 20px 0 10px;
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 15px;
+      color: #C3B9B5;
+    }
+    p {
+      margin: 0;
+      font-size: 20px;
+      line-height: 25px;
+      color: #59443F;
+    }
+  }
+}

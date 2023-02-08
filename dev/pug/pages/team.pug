@@ -1,0 +1,42 @@
+extends ../layout/main
+
+block variables
+
+  - var title = 'Aibolit'
+  - var pageClass = 'team-page'
+
+block content
+
+  - var Experience = ['стаж 10 лет', 'стаж 5 лет', 'стаж 4 года', 'стаж 8 месяцев', 'стаж 1 год', 'стаж 5 лет', 'стаж 4 года', 'стаж 3 месяца']
+  - var Specialist = ['врач', 'врач', 'ассистент ветеринарного врача', 'ординатор', 'врач', 'врач', 'ассистент ветеринарного врача', 'ординатор']
+  - var NameSurname = ['Иванова Анастасия Андреевна', 'Константинопольский Константин Константинович', 'Иванова Анастасия Андреевна', 'Константинопольский Константин Константинович', 'Иванова Анастасия Андреевна', 'Константинопольский Константин Константинович', 'Иванова Анастасия Андреевна', 'Константинопольский Константин Константинович']
+  - var Specialization = ['Терапия, УЗИ-диагностика, хирургия, ортопедия, лаборатория', 'Врач общей практики', 'Анестезиология, стоматология, лаборатория', 'Врач общей практики', 'Терапия, УЗИ-диагностика, хирургия, ортопедия, лаборатория', 'Врач общей практики', 'Анестезиология, стоматология, лаборатория', 'Врач общей практики']
+  
+  .team
+    .container
+      .row
+        .col-lg-5
+          .team-panel
+            h1 Коллектив
+            .team-links
+              a(href="#box1") О НАС
+              a(href="#box2") СПЕЦИАЛИСТЫ
+        .col-lg-7
+          .team-content
+            img(src="/static/img/content/team.jpg" title="История компании" alt="История компании" width="910" height="470")
+            .about-us
+              h2(id="box1") О нас
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+              h2(id="box2") Специалисты
+              .specialists
+                - for (var i=0; i<8; i++)
+                  a(href="specialist.html") 
+                    .block
+                      .picture
+                        img(src='/static/img/content/Ellipse-'+ i +'.png' title="Специалисты" alt="Специалисты" width="130" height="130")
+                        span= Experience[i]
+                      .info
+                        span= Specialist[i]
+                        p= NameSurname[i]
+                        span специализация
+                        p= Specialization[i]

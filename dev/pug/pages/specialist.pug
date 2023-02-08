@@ -1,0 +1,83 @@
+extends ../layout/main
+
+block variables
+
+  - var title = 'Aibolit'
+  - var pageClass = 'specialist-page'
+
+block content
+
+  - var userName = ['Виктория', 'Александр', 'Дмитрий', 'Маргарита']
+  - var reviewText = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, Lorem ip', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation']
+  - var reviewAnswer = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!']
+
+  .specialist
+    .container
+      .row
+        .col-lg-5
+          .block-img 
+            img(src="/static/img/content/Ellipse-0.png" title="Специалисты" alt="Специалисты" width="333" height="333")
+            span ближайшая дата приема: 29.08.19
+            a(href="#").btn_signup
+              | ЗАПИСАТЬСЯ
+            a(href="#").btn_review
+              | ОСТАВИТЬ ОТЗЫВ
+        .col-lg-7
+          .block-info
+            h3 Иванова Анастасия Андреевна
+            span стаж 10 лет
+            p Терапия, УЗИ-диагностика, хирургия, ортопедия
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+            p Пройденные курсы
+            .courses
+              .cours
+                span 2015
+                p Повышение квалификации
+              .cours
+                span 2016
+                p Название курса
+              .cours
+                span 2017
+                p Международная конференция Конференция
+          .block-review
+            h3 Отзывы
+            .head-review
+              span 101 отзыв
+              .pagination 
+                a(href="#" data-box="box0").active
+                  | 1 
+                a(href="#" data-box="box1") 2 
+                a(href="#" data-box="box2") 3 
+                a(href="#" data-box="box3") 4
+            .page-review-wrap
+              - for (var i=0; i<4; i++)
+                .page-review(class="box"+ i)
+                  - for (var j=0; j<4; j++)
+                    .review
+                      ._avatar
+                        img(src="/static/img/content/avatar-"+ j +".png" title="avatar" alt="avatar" width="130" height="130")
+                      ._info
+                        ._user
+                          ._name
+                            span пользователь
+                            p= userName[j]
+                          img(src="/static/img/content/emoji-"+ j +".png" title="emoji" alt="emoji" width="41" height="36")
+                        ._text 
+                          span отзыв
+                          p= reviewText[j]
+                        ._answer
+                          img(src="/static/img/content/avatar-spec.png" title="avatar" alt="avatar" width="75" height="75")
+                          ._answer-text
+                            span ответ
+                            p= reviewAnswer[j]
+  
+  .modal-wrap
+    .modal
+      .modal-form
+        h2 Оставить отзыв
+        form
+          textarea(name="message" placeholder="Отзыв")
+          button(type="submit" name="submit")
+            | ОТПРАВИТЬ
+      .modal-thankyou
+        p Спасибо! Мы рассмотрим Ваш отзыв и опубликуем его в ближайшее время
