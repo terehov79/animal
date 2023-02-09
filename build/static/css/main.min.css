@@ -424,8 +424,16 @@ textarea {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    @media (max-width: 992px) {
+      .footer__app {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; } }
     .footer__app a {
       display: block; }
+      @media (max-width: 992px) {
+        .footer__app a {
+          padding-right: 30px; } }
       .footer__app a img {
         width: 140px;
         height: 40px; }
@@ -440,6 +448,11 @@ textarea {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    @media (max-width: 992px) {
+      .footer__socials {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; } }
     .footer__socials svg {
       width: 40px;
       height: 40px;
@@ -448,6 +461,9 @@ textarea {
       transition: all 0.5s ease-in-out; }
       .footer__socials svg:hover {
         fill: #FFC59E; }
+      @media (max-width: 992px) {
+        .footer__socials svg {
+          margin-right: 50px; } }
   .footer__mail {
     width: 100%;
     padding: 30px 0 70px; }
@@ -969,20 +985,24 @@ textarea {
 
 .history, .team, .blog {
   padding: 200px 0 50px; }
-  .history-panel, .team-panel, .blog-panel {
-    padding-left: 130px; }
-    .history-panel h1, .team-panel h1, .blog-panel h1 {
-      padding: 0 0 100px;
-      max-width: 400px;
-      font-family: 'SchoolBook';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 80px;
-      line-height: 110px;
-      color: #080606; }
-  .history-links, .team-links, .blog-links {
+
+.sidebar {
+  padding-left: 130px; }
+  @media (max-width: 1400px) {
+    .sidebar {
+      padding: 50px; } }
+  .sidebar h1 {
+    padding: 0 0 100px;
+    max-width: 400px;
+    font-family: 'SchoolBook';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 110px;
+    color: #080606; }
+  .sidebar-links {
     width: 100%; }
-    .history-links a, .team-links a, .blog-links a {
+    .sidebar-links a {
       display: block;
       padding-bottom: 30px;
       font-family: 'Futura New';
@@ -990,48 +1010,41 @@ textarea {
       font-weight: bold;
       line-height: 30px;
       color: #C3B9B5; }
-  .history-content, .team-content, .blog-content {
+
+.content-panel {
+  width: 100%; }
+  .content-panel .row img {
+    width: 100%;
+    height: auto; }
+  .content-panel > img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center center;
+    object-position: center center; }
+  .content-panel .about-us {
     width: 100%; }
-    .history-content .img, .team-content .img, .blog-content .img {
-      width: 100%;
-      padding-top: 50px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-      .history-content .img img, .team-content .img img, .blog-content .img img {
-        width: 430px;
-        height: 430px; }
-    .history-content img, .team-content img, .blog-content img {
-      width: 100%;
-      height: auto; }
-    .history-content .about-us, .team-content .about-us, .blog-content .about-us {
-      width: 100%; }
-      .history-content .about-us h2, .team-content .about-us h2, .blog-content .about-us h2 {
-        padding: 50px 0;
-        font-family: 'SchoolBook';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 40px;
-        color: #080606; }
-      .history-content .about-us ul, .team-content .about-us ul, .blog-content .about-us ul {
-        margin-top: -50px; }
-      .history-content .about-us p, .history-content .about-us li, .team-content .about-us p, .team-content .about-us li, .blog-content .about-us p, .blog-content .about-us li {
-        padding-bottom: 50px;
-        font-family: 'Futura New';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        color: #59443F; }
-      .history-content .about-us li, .team-content .about-us li, .blog-content .about-us li {
-        padding: 0; }
+    .content-panel .about-us h2 {
+      padding: 50px 0;
+      font-family: 'SchoolBook';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 40px;
+      color: #080606; }
+    .content-panel .about-us ul {
+      margin-top: -50px; }
+    .content-panel .about-us p, .content-panel .about-us li {
+      padding-bottom: 50px;
+      font-family: 'Futura New';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #59443F; }
+    .content-panel .about-us li {
+      padding: 0; }
 
 .team .specialists {
   width: 100%;
@@ -1046,9 +1059,12 @@ textarea {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .team .specialists > a {
+    display: block;
+    width: 100%; }
 
 .team .block {
-  width: 442px;
+  width: 100%;
   height: 255px;
   padding: 30px;
   margin-bottom: 50px;
@@ -1081,6 +1097,10 @@ textarea {
     .team .block .picture img {
       width: 130px;
       height: 130px; }
+      @media (max-width: 1400px) {
+        .team .block .picture img {
+          width: 100%;
+          height: auto; } }
     .team .block .picture span {
       margin-top: 20px;
       font-family: 'Futura New';
@@ -1111,9 +1131,31 @@ textarea {
     .team .block .info p:last-child {
       padding: 0; }
 
+.privacy {
+  padding-top: 200px; }
+  .privacy h2 {
+    padding: 30px 0;
+    font-family: 'SchoolBook';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #080606; }
+  .privacy p {
+    padding-bottom: 50px;
+    font-family: 'Futura New';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #59443F; }
+
 .specialist {
   width: 100%;
   padding-top: 200px; }
+  @media (max-width: 1200px) {
+    .specialist {
+      padding-top: 150px; } }
   .specialist .block-img {
     width: 100%;
     padding-top: 120px;
@@ -1130,9 +1172,16 @@ textarea {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    @media (max-width: 992px) {
+      .specialist .block-img {
+        padding-top: 50px; } }
     .specialist .block-img img {
       width: 333px;
       height: 333px; }
+      @media (max-width: 1400px) {
+        .specialist .block-img img {
+          width: 100%;
+          height: auto; } }
     .specialist .block-img span {
       padding: 30px 0;
       font-family: 'Futura New';
@@ -1143,6 +1192,9 @@ textarea {
       color: #C3B9B5; }
   .specialist .block-info, .specialist .block-review {
     width: 100%; }
+    @media (max-width: 992px) {
+      .specialist .block-info, .specialist .block-review {
+        padding-top: 50px; } }
     .specialist .block-info h3, .specialist .block-review h3 {
       font-family: 'SchoolBook';
       font-style: normal;
@@ -1254,6 +1306,10 @@ textarea {
             width: 130px;
             height: 130px;
             border-radius: 50%; }
+            @media (max-width: 1400px) {
+              .specialist .block-review .page-review .review__avatar img {
+                width: 100%;
+                height: auto; } }
         .specialist .block-review .page-review .review__info {
           width: 85%;
           margin-left: 30px; }
@@ -1267,6 +1323,9 @@ textarea {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center; }
+          .specialist .block-review .page-review .review__user img {
+            width: 41px;
+            height: 36px; }
         .specialist .block-review .page-review .review__text {
           width: 100%;
           padding-top: 20px; }
@@ -1365,8 +1424,6 @@ textarea {
 .blog {
   width: 100%;
   padding-bottom: 0; }
-  .blog-content {
-    width: 100%; }
   .blog-section {
     width: 100%;
     padding-bottom: 60px;

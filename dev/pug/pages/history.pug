@@ -11,14 +11,14 @@ block content
     .container
       .row 
         .col-lg-5
-          .history-panel
+          .sidebar
             h1 История компании
-            .history-links
+            .sidebar-links
               a(href="#box1") ПОЗДАГОЛОВОК 1
               a(href="#box2") ПОЗДАГОЛОВОК 2
               a(href="#box3") ПОЗДАГОЛОВОК 3
         .col-lg-7
-          .history-content
+          .content-panel
             img(src="/static/img/content/history01.jpg", title="История компании" alt="История компании" width="910" height="470")
             .about-us
               h2(id="box1") Подзаголовок 1
@@ -37,10 +37,12 @@ block content
                 li - репродуктивной области;
                 li - инфекционной и инвазионной природы;
                 li - токсикологической природы.
-          .history-content
-            .img
-              img(src="/static/img/content/history02.jpg", title="История компании" alt="История компании" width="430" height="430")
-              img(src="/static/img/content/history03.jpg", title="История компании" alt="История компании" width="430" height="430")
+          .content-panel
+            .row.mt-5
+              .col-sm-6.mb-4
+                img(src="/static/img/content/history02.jpg", title="История компании" alt="История компании" width="430" height="430")
+              .col-sm-6.mb-4
+                img(src="/static/img/content/history03.jpg", title="История компании" alt="История компании" width="430" height="430")
             .about-us
               h2(id="box2") Подзаголовок 2
               p Врач-терапевт подходит к лечению животного комплексно, предварительно изучив его анамнез, учитывая возраст, пол, породу, наличие хронических болезней, условия содержания, типа кормления, оценив общее состояние питомца, полностью осмотрев его и назначив необходимую диагностику и соответствующее лечение.
@@ -55,7 +57,7 @@ block content
                 li - микроскопия мазков и соскобов;
                 li - люминесцентный тест на лишай;
                 li - экспресс-анализы на основные вирусные заболевания.
-          .history-content
+          .content-panel
             .about-us
               h2(id="box3") Подзаголовок 3
               p Большинство исследований, требующих седации (эндоскопия, МРТ, лапароскопия), так же доступны в течение суток. Более сложные анализы, такие как бактериологический посев, гормоны, гистологическое исследование мы направляем в дистанционную лабораторию.

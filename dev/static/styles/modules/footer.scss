@@ -55,8 +55,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include md {
+      justify-content: flex-start;
+    }
     a {
       display: block;
+      @include md {
+        padding-right: 30px;
+      }
       img {
         @include size(140px, 40px);
       }
@@ -67,12 +73,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include md {
+      justify-content: flex-start;
+    }
     svg {
       @include size(40px);
       fill: #fff;
       transition: all 0.5s ease-in-out;
       &:hover {
         fill: #FFC59E;
+      }
+      @include md {
+        margin-right: 50px;
       }
     }
   }
